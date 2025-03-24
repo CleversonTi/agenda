@@ -1,5 +1,6 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { UserIcon, MailIcon, ListCheckIcon } from 'vue-tabler-icons';
+import { ChevronDown } from 'lucide-vue-next';
 </script>
 
 <template>
@@ -8,10 +9,19 @@ import { UserIcon, MailIcon, ListCheckIcon } from 'vue-tabler-icons';
     <!-- ---------------------------------------------- -->
     <v-menu :close-on-content-click="false">
         <template v-slot:activator="{ props }">
-            <v-btn class="profileBtn custom-hover-primary" variant="text" v-bind="props" icon>
-                <v-avatar size="35">
-                    <img src="@/assets/images/users/avatar-1.jpg" height="35" alt="user" />
-                </v-avatar>
+            <v-btn class=" plain"  v-bind="props" icon>
+               <div class="alias">
+                  <span>PV</span>
+                 </div>
+               <div class="user-persona">
+                    <router-link to="/"> 
+                    
+                        <span>
+                            Primeiro Segundo 
+                        </span> 
+                        <ChevronDown  stroke-width="1.5" size="20"/>
+                    </router-link>
+                </div>
             </v-btn>
         </template>
         <v-sheet rounded="md" width="200" elevation="10" class="mt-2">
@@ -20,13 +30,13 @@ import { UserIcon, MailIcon, ListCheckIcon } from 'vue-tabler-icons';
                     <template v-slot:prepend>
                         <UserIcon stroke-width="1.5" size="20"/>
                     </template>
-                    <v-list-item-title class="pl-4 text-body-1">My Profile</v-list-item-title>
+                    <v-list-item-title class="pl-4 text-body-1">Meu Perfil</v-list-item-title>
                 </v-list-item>
                 <v-list-item value="item2" color="primary">
                     <template v-slot:prepend>
                         <MailIcon stroke-width="1.5" size="20"/>
                     </template>
-                    <v-list-item-title  class="pl-4 text-body-1">My Account</v-list-item-title>
+                    <v-list-item-title  class="pl-4 text-body-1">Minha Conta</v-list-item-title>
                 </v-list-item>
                 <v-list-item value="item3" color="primary"> 
                     <template v-slot:prepend>
@@ -36,7 +46,7 @@ import { UserIcon, MailIcon, ListCheckIcon } from 'vue-tabler-icons';
                 </v-list-item>
             </v-list>
             <div class="pt-4 pb-4 px-5 text-center">
-                <v-btn to="/auth/login" color="primary" variant="outlined" block>Logout</v-btn>
+                <v-btn to="/auth/login" color="primary" variant="outlined" block>Sair</v-btn>
             </div>
         </v-sheet>
     </v-menu>

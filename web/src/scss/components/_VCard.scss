@@ -7,11 +7,11 @@
 }
 
 .v-card-text {
-    padding: $card-text-spacer;
+    padding: 24px ;
 }
 
 .v-card-actions {
-    padding: 0.625rem $card-text-spacer $card-text-spacer;
+    padding: 0.625rem 24px  24px ;
 }
 
 .v-card {
@@ -29,7 +29,7 @@
 }
 
 .v-card-item {
-    padding: $card-item-spacer-xy;
+    padding: 20px 24px;
 }
 
 .card-hover-border {
