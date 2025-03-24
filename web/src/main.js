@@ -9,6 +9,7 @@ import { createApp } from 'vue'
 
 const app = createApp(App)
 import vuetify from './plugins/vuetify'
+import '@/scss/style.scss';
 
 
 app

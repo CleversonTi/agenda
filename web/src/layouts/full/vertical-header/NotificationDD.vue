@@ -5,3 +5,10 @@
         </v-badge>
     </v-btn>
 </template>
+
+<script setup>
+import { BellRingingIcon } from 'vue-tabler-icons'
+
+
+</script>
+
